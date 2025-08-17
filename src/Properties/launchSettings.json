@@ -1,0 +1,25 @@
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development",
+            "PROCESSOR_MAIN_URL": "http://localhost:8001",
+            "PROCESSOR_MAIN_POOL_INTERVAL_STATUS": "5",
+            "PROCESSOR_FALLBACK_URL": "http://localhost:8002",
+            "PROCESSOR_FALLBACK_POOL_INTERVAL_STATUS": "5"
+        },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:9998"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker",
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "environmentVariables": {
+        "ASPNETCORE_HTTP_PORTS": "8080"
+      },
+      "publishAllPorts": true
+    }
+  },
+  "$schema": "http://json.schemastore.org/launchsettings.json"
+}
