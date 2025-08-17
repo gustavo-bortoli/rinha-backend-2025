@@ -1,4 +1,4 @@
-﻿using Payments.Entities;
+﻿using Payments.Summary.Entities;
 
 namespace Payments.Summary.Repositories;
 

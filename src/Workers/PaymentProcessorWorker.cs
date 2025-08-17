@@ -67,7 +67,8 @@ public class PaymentProcessorWorker(
                 if (processed)
                 {
                     // TODO criar processamento assíncrono para salvar no banco
-                    await summaryService.InsertPaymentAsync(payment, "default");
+                    var entity = payment.ToEntity(sentTo: "default");
+                    await summaryService.InsertPaymentAsync(entity);
                 }
             }
             catch (Exception ex)
@@ -85,7 +86,8 @@ public class PaymentProcessorWorker(
                     if (processed)
                     {
                         // TODO criar processamento assíncrono para salvar no banco
-                        await summaryService.InsertPaymentAsync(payment, "fallback");
+                        var entity = payment.ToEntity(sentTo: "fallback");
+                        await summaryService.InsertPaymentAsync(entity);
                     }
                 }
                 catch (Exception ex)

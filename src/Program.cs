@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Payments;
 using Payments.Commands;
 using Payments.DTOs;
-using Payments.Entities;
+using Payments.Summary.Entities;
 using Payments.Summary.Services;
 using System.Text.Json.Serialization;
 using System.Threading.Channels;

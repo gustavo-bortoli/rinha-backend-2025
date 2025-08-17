@@ -1,4 +1,4 @@
-﻿namespace Payments.Entities;
+﻿namespace Payments.Summary.Entities;
 
 public record PaymentEntity
 {
