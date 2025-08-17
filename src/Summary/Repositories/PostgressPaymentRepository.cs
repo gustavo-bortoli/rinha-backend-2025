@@ -28,10 +28,10 @@ public class PostgresPaymentRepository(string _connectionString) : IPaymentRepos
         const string sql =
             """
             SELECT 
-                correlation_id AS CorrelationId, 
-                amount AS Amount, 
-                requested_at AS RequestedAt, 
-                sent_to AS SentTo
+                correlation_id AS correlationId, 
+                amount AS amount, 
+                requested_at AS requestedAt, 
+                sent_to AS sentTo
             FROM payments
             WHERE (@from IS NULL OR requested_at >= @from)
                 AND (@to IS NULL OR requested_at <= @to);
